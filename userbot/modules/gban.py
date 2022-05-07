@@ -33,7 +33,7 @@ async def handler(tele):
                             tele.chat_id, guser.id, view_messages=False
                         )
                         await tele.reply(
-                            f"**Gbanned Spoted** \n"
+                            f"*User Spotted Gbans** \n"
                             f"**First Name :** [{guser.id}](tg://user?id={guser.id})\n"
                             f"**Action :** `Banned`"
                         )
@@ -42,7 +42,7 @@ async def handler(tele):
 
 
 @poci_cmd(pattern="gband(?: |$)(.*)")
-@register(pattern=r"^\.cgband(?: |$)(.*)", sudo=True)
+@(pattern=r"^\.cgband(?: |$)(.*)", sudo=True)
 async def gben(userbot):
     dc = userbot
     sender = await dc.get_sender()
