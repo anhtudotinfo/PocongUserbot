@@ -131,7 +131,7 @@ NO_LOAD = os.environ.get("NO_LOAD", "").split()
 
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "True"))
-PM_LIMIT = int(os.environ.get("PM_LIMIT", 3))
+PM_LIMIT = int(os.environ.get("LMT_PM", 3))
 
 # Custom Handler command
 CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
@@ -156,7 +156,8 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/YusrilRNLD/PocongUserbot-edited"
+    "UPSTREAM_REPO_URL"
+    "https://github.com/YusrilRNLD/PocongUserbot-edited"
 )
 
 # Custom name sticker pack
@@ -217,6 +218,32 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 
 # bit.ly module
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
+
+# Untuk Melihat Repo
+
+REPO_NAME = os.environ.get("REPO_NAME") or "⭐𝗨-𝗕𝗢𝗧⭐"
+
+# Default botlog
+
+BOTLOG_MSG = os.environ.get("BOTLOG_MSG") or f"```💢 RAM - UBOT DAH AKTIF KONTOL!!! 💢```"
+
+# Devg For gesss
+
+DEVG = [
+
+    1093385250, # yusril
+
+    1935448181, # kevin
+]
+
+# DEVS only own id
+
+DEVS = [
+
+    1093385250,  # yusril
+
+    1935448181, # kevin
+]
 
 
 # Bot version
