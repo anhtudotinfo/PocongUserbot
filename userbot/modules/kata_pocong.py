@@ -1,5 +1,6 @@
 #  (C) @pocongonlen
 # ⚠️ Do not remove credits.
+# ReEdit By @YUSRIL4YOU
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, bot
@@ -49,7 +50,7 @@ KATAPOCONG = [
 ]
 
 
-@bot.on(poci_cmd(outgoing=True, pattern=r"quote$"))
+@bot.on(poci_cmd(outgoing=True, pattern=r"qt$"))
 async def _(sange):
     """Quote Gajelas"""
     await sange.edit(choice(KATAPOCONG))
@@ -58,7 +59,7 @@ async def _(sange):
 CMD_HELP.update(
     {
         "quotes": f"**Plugin : **`quotes`\
-        \n\n  •  **Syntax :** `{cmd}quote`\
+        \n\n  •  **Syntax :** `{cmd}qt`\
         \n  •  **Function : **Untuk Mengirim Kata-kata quote.\
     "
     }
