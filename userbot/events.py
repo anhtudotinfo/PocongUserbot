@@ -25,7 +25,7 @@ def poci_cmd(pattern=None, command=None, **args):
     previous_stack_frame = stack[1]
     file_test = Path(previous_stack_frame.filename)
     file_test = file_test.stem.replace(".py", "")
-    args.get("allow_sudo", False)
+    args.get("allow_sudo", True)
     if pattern is not None:
         if pattern.startswith(r"\#"):
             args["pattern"] = re.compile(pattern)
@@ -195,7 +195,7 @@ def register(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     text = "**!!! POCONGUSERBOT ERROR REPOR !!!**\n\n"
-                    link = "[Group Support](https://t.me/PocongUserbot)"
+                    link = "[Group Support](https://t.me/jb_indo)"
                     text += "Jika mau, Anda bisa melaporkan error ini, "
                     text += f"Cukup forward saja pesan ini ke {link}.\n\n"
 
