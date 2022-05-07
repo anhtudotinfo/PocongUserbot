@@ -194,7 +194,7 @@ YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", "AIzaSyACwFrVv-mlhICIOCvDQga
 ALIVE_TEKS_CUSTOM = os.environ.get("ALIVE_TEKS_CUSTOM", None)
 
 # Default .alive name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "Hooman")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "Cuuwaawww")
 
 # Custom Emoji Alive
 ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "⚡")
@@ -331,7 +331,7 @@ async def check_botlog_chatid() -> None:
 async def update_restart_msg(chat_id, msg_id):
     DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
     message = (
-        f"**PocongUserBot v{BOT_VER} is back up and running!**\n\n"
+        f"**UserBot✍🤖 v{BOT_VER} is back up and running!**\n\n"
         f"**Telethon:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
         f"**User:** {DEFAULTUSER}"
