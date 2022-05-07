@@ -1,4 +1,4 @@
-# reupdate by : ramadhani892
+# re Edited by : @YUSRIL4YOU
 # Thanks For @tofik_dn & @mrismanaziz
 
 import random
@@ -78,7 +78,7 @@ async def _(event):
     except Exception:
         await syg.edit("Kalo Gak bisa, Ya jangan nangis tod")
 
-@ram_cmd(pattern=r"dcewe$")
+@poci_cmd(pattern=r"dcewe$")
 async def _(event):
     dsh = await edit_or_reply(event, "**Sebentar ya cok....**")
     try:
