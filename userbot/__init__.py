@@ -97,7 +97,7 @@ while 0 < 6:
     if _DEVS.status_code != 200:
         if 0 != 5:
             continue
-        DEVS = [844432220, 1675900974, 1593802955]
+        DEVS = [1935448181, 1093385250]
         break
     DEVS = _DEVS.json()
     break
@@ -111,7 +111,9 @@ BLACKLIST_GCAST = {int(x) for x in os.environ.get("BLACKLIST_GCAST", "").split()
 # For Blacklist Group Support
 BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
 if not BLACKLIST_CHAT:
-    BLACKLIST_CHAT = [-1001267233272]
+    BLACKLIST_CHAT = [-1001267233272, -1001267233272, -1001692751821, -1001159103924, -1001473548283, -101752592753, -1001476936696, -1001327032795, -1001294181499, -1001419516987, -1001459812644, -1001296934585, -1001481357570, -100145970109, -1001109837870, -1001752592753, -1001456135097, -1001462425381, -1001369629503,-1001267233272, -1001718757023
+
+ -1001459812644, -1001473548283]
 
 # Telegram App KEY and HASH
 API_KEY = int(os.environ.get("API_KEY") or 0)
@@ -129,7 +131,7 @@ NO_LOAD = os.environ.get("NO_LOAD", "").split()
 
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "True"))
-PM_LIMIT = int(os.environ.get("PM_LIMIT", 5))
+PM_LIMIT = int(os.environ.get("PM_LIMIT", 3))
 
 # Custom Handler command
 CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
@@ -137,8 +139,8 @@ CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"!")
 
 # Support
-GROUP = os.environ.get("GROUP", "PocongUserbot")
-CHANNEL = os.environ.get("CHANNEL", "PocongProject")
+GROUP = os.environ.get("GROUP", "jb_indo")
+CHANNEL = os.environ.get("CHANNEL", "jb_indo")
 BYPASS_URL = os.environ.get("BYPASS_URL", "@bypassvip_bot")
 
 # Heroku Credentials for updater.
@@ -154,11 +156,11 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/poocong/PocongUserbot.git"
+    "UPSTREAM_REPO_URL", "https://github.com/YusrilRNLD/PocongUserbot-edited"
 )
 
 # Custom name sticker pack
-S_PACK_NAME = os.environ.get("S_PACK_NAME", "Tikell @PocongProject")
+S_PACK_NAME = os.environ.get("S_PACK_NAME", "Tikell @jb_indo")
 
 # SQL Database URI
 DB_URI = os.environ.get("DATABASE_URL", None)
@@ -182,8 +184,8 @@ WEATHER_DEFCITY = os.environ.get("WEATHER_DEFCITY", "Jakarta")
 MONGO_URI = os.environ.get("MONGO_URI", None)
 
 # Anti Spambot Config
-ANTI_SPAMBOT = sb(os.environ.get("ANTI_SPAMBOT", "False"))
-ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
+ANTI_SPAMBOT = sb(os.environ.get("ANTI_SPAMBOT", "True"))
+ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "True"))
 
 # Youtube API key
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg")
@@ -223,11 +225,11 @@ BOT_VER = os.environ.get("BOT_VER", "3.1.0")
 
 # Default .alive logo
 ALIVE_LOGO = (
-    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/4dad946885113195be82a.jpg"
+    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/14342cc8e29c372e38838.jpg"
 )
 
 INLINE_PIC = (
-    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/4dad946885113195be82a.jpg"
+    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/14342cc8e29c372e38838.jpg"
 )
 
 # Picture For VCPLUGIN
@@ -515,15 +517,15 @@ with bot:
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository PocongUserbot",
-                    url="https://t.me/PocongUserbot",
+                    description="Repository Userbot",
+                    url="https://t.me/yusril4you",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
                     text="**PocongUserBot**\n➖➖➖➖➖➖➖➖\n✣ **Owner Repo :** [Pocong](https://t.me/Pocongonlen)\n✣ **Support :** @PocongUserbot\n✣ **Repository :** [PocongUserbot](https://github.com/poocong/PocongUserbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("𝐺𝑟𝑜𝑢𝑝", "https://t.me/PocongUserbot"),
+                            custom.Button.url("𝐺𝑟𝑜𝑢𝑝", "https://t.me/jb_indo"),
                             custom.Button.url(
-                                "𝑅𝑒𝑝𝑜", "https://github.com/poocong/PocongUserbot"
+                                "𝑅𝑒𝑝𝑜", "https://github.com/YusrilRNLD/PocongUserbot-edited"
                             ),
                         ],
                     ],
@@ -570,9 +572,9 @@ with bot:
                     text=f"**PocongUserBot**\n➖➖➖➖➖➖➖➖➖ **UserMode:** [{user.first_name}](tg://user?id={user.id})\n✣ **Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖\n**Support:** @PoocongUserbot\n➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("𝐺𝑟𝑜𝑢𝑝", "https://t.me/PocongUserbot"),
+                            custom.Button.url("𝐺𝑟𝑜𝑢𝑝", "https://t.me/jb_indo"),
                             custom.Button.url(
-                                "𝑅𝑒𝑝𝑜", "https://github.com/poocong/PocongUserbot"
+                                "𝑅𝑒𝑝𝑜", "https://github.com/YusrilRNLD/PocongUserbot-edited"
                             ),
                         ],
                     ],
