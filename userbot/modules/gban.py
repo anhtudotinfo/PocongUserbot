@@ -42,7 +42,7 @@ async def handler(tele):
 
 
 @poci_cmd(pattern="gband(?: |$)(.*)")
-@(pattern=r"^\.cgband(?: |$)(.*)", sudo=True)
+@poci_cmd(pattern=r"^\.cgband(?: |$)(.*)", sudo=True)
 async def gben(userbot):
     dc = userbot
     sender = await dc.get_sender()
@@ -50,7 +50,7 @@ async def gben(userbot):
     if sender.id != me.id:
         dark = await dc.reply("`Gbanning...`")
     else:
-        dark = await dc.edit("`Memproses Global Banned Jamet..`")
+        dark = await dc.edit("`Memproses Global Banned Anak Haram..`")
     me = await userbot.client.get_me()
     await dark.edit("`Global Banned Akan Segera Aktif..`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
@@ -70,7 +70,7 @@ async def gben(userbot):
         return await dark.edit("**Gagal Global Banned :(**")
     if user:
         if user.id in DEVS:
-            return await dark.edit("**Gagal Global Banned, Dia Adalah Pembuat Saya 🤪**")
+            return await dark.edit("**Gagal Global Banned, Dia Adalah Pembuat Saya🖕**")
         try:
             from userbot.modules.sql_helper.gmute_sql import gmute
         except BaseException:
@@ -111,7 +111,7 @@ async def gben(userbot):
 
 
 @poci_cmd(pattern="ungband(?: |$)(.*)")
-@register(pattern=r"^\.cungband(?: |$)(.*)", sudo=True)
+@poci_cmd(pattern=r"^\.cungband(?: |$)(.*)", sudo=True)
 async def gunben(userbot):
     dc = userbot
     sender = await dc.get_sender()
@@ -155,7 +155,7 @@ async def gunben(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await dark.edit("`Membatalkan Global Banned...`")
+                await dark.edit("`Membatalkan Global Banned Anak Haram...`")
             except BaseException:
                 b += 1
     else:
