@@ -1,2 +1,2 @@
 # Extra Resources for PocongUserbot
-Repository [PocongUserbot](https://github.com/poocong/PocongUserbot)
+Repository [Userbot](https://github.com/YusrilRNLD/PocongUserbot-edited)
