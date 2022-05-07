@@ -38,7 +38,7 @@ def mentionuser(name, userid):
 
 
 @poci_cmd(pattern="gban(?: |$)(.*)")
-@register(pattern=r"^\.cgban(?: |$)(.*)", sudo=True)
+@poci_cmd(pattern=r"^\.cgban(?: |$)(.*)", sudo=True)
 async def gban(event):
     if event.fwd_from:
         return
@@ -51,11 +51,11 @@ async def gban(event):
         await gbun.edit("**Ngapain NgeGban diri sendiri Goblok 🐽**")
         return
     if user.id in DEVS:
-        await gbun.edit("**Gagal GBAN karena dia adalah Pembuat saya 🗿**")
+        await gbun.edit("**Gagal GBAN karena dia adalah Pembuat saya 🖕**")
         return
     if gban_sql.is_gbanned(user.id):
         await gbun.edit(
-            f"**Si** [Caper](tg://user?id={user.id}) **Goblok ini sudah ada di daftar gbanned**"
+            f"**Si Anak** [Harom](tg://user?id={user.id}) **Goblok ini sudah ada di daftar gbanned**"
         )
     else:
         gban_sql.freakgban(user.id, reason)
@@ -67,7 +67,7 @@ async def gban(event):
         await gbun.edit("**Anda Tidak mempunyai GC yang anda admin 🥺**")
         return
     await gbun.edit(
-        f"**Prosess gban anak** [yteam](tg://user?id={user.id}) **di** `{len(san)}` **groups**"
+        f"**Prosess Gban Anak** [Harom](tg://user?id={user.id}) **di** `{len(san)}` **groups**"
     )
     for i in range(fiz):
         try:
@@ -92,7 +92,7 @@ async def gban(event):
 
 
 @poci_cmd(pattern="ungban(?: |$)(.*)")
-@register(pattern=r"^\.cungban(?: |$)(.*)", sudo=True)
+@poci_cmd(pattern=r"^\.cungban(?: |$)(.*)", sudo=True)
 async def ungban(event):
     if event.fwd_from:
         return
@@ -105,7 +105,7 @@ async def ungban(event):
         gban_sql.freakungban(user.id)
     else:
         await ungbun.edit(
-            f"**Si** [CAPER](tg://user?id={user.id}) **ini tidak ada dalam daftar gban Anda**"
+            f"**Si Anak** [Harom](tg://user?id={user.id}) **ini tidak ada dalam daftar gban Anda**"
         )
         return
     san = []
@@ -116,7 +116,7 @@ async def ungban(event):
         await ungbun.edit("**Anda Tidak mempunyai GC yang anda admin 🥺**")
         return
     await ungbun.edit(
-        f"**Prosess ungban anak** [yteam](tg://user?id={user.id}) **di** `{len(san)}` **groups**"
+        f"**Prosess UnGban Anak** [Harom](tg://user?id={user.id}) **di** `{len(san)}` **groups**"
     )
     for i in range(fiz):
         try:
@@ -145,7 +145,7 @@ async def gablist(event):
     if event.fwd_from:
         return
     gbanned_users = gban_sql.get_all_gbanned()
-    GBANNED_LIST = "**List Global Banned Saat Ini**\n"
+    GBANNED_LIST = "**Daftar Anak Harom Di-Gban Banned Saat Ini**\n"
     if len(gbanned_users) > 0:
         for a_user in gbanned_users:
             if a_user.reason:
@@ -155,7 +155,7 @@ async def gablist(event):
                     f"👉 [{a_user.chat_id}](tg://user?id={a_user.chat_id}) `No Reason`\n"
                 )
     else:
-        GBANNED_LIST = "Belum ada Pengguna yang Di-Gban"
+        GBANNED_LIST = "Belum Ada Anak Harom Yang Di-Gban"
     await edit_or_reply(event, GBANNED_LIST)
 
 
