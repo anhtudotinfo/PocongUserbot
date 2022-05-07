@@ -25,7 +25,9 @@ while 0 < 6:
     if _GCAST_BLACKLIST.status_code != 200:
         if 0 != 5:
             continue
-        GCAST_BLACKLIST = [-1001267233272, -1001473548283]
+        GCAST_BLACKLIST = [-1001267233272, -1001692751821, -1001159103924, -1001473548283, -101752592753, -1001476936696, -1001327032795, -1001294181499, -1001419516987, -1001459812644, -1001296934585, -1001481357570, -100145970109, -1001109837870, -1001752592753, -1001456135097, -1001462425381, -1001369629503,-1001267233272, -1001718757023
+
+ -1001459812644, -1001473548283]
         break
     GCAST_BLACKLIST = _GCAST_BLACKLIST.json()
     break
@@ -99,7 +101,7 @@ async def gucast(event):
 
 @poci_cmd(pattern="blchat$")
 async def sudo(event):
-    blacklistgc = "True" if BLACKLIST_GCAST else "False"
+    blacklistgc = "True" if BLACKLIST_GCAST else "True"
     blc = blchat
     list = blc.replace(" ", "\n» ")
     if blacklistgc == "True":
