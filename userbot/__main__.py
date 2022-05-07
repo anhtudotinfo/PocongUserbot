@@ -71,7 +71,7 @@ async def pocong_userbot_on():
     except BaseException:
         pass
     try:
-        await bot(JoinChannelRequest("@jb_indo"))
+        await bot(JoinChannelRequest("@selllastore"))
     except BaseException:
         pass
     
