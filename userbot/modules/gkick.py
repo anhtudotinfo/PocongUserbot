@@ -7,7 +7,7 @@ from userbot.utils import get_user_from_event, poci_cmd
 
 
 @poci_cmd(pattern="gkick(?: |$)(.*)")
-@register(pattern=r"^\.cgkick(?: |$)(.*)", sudo=True)
+@poci_cmd(pattern=r"^\.cgkick(?: |$)(.*)", sudo=True)
 async def gspide(rk):
     lazy = rk
     sender = await lazy.get_sender()
@@ -17,7 +17,7 @@ async def gspide(rk):
     else:
         rkp = await lazy.edit("`Processing...`")
     me = await rk.client.get_me()
-    await rkp.edit("`Memproses Global Kick Jamet Goblok!`")
+    await rkp.edit("`Memproses Global Kick Anak Haram...!`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     await rk.get_chat()
     a = b = 0
@@ -52,7 +52,7 @@ async def gspide(rk):
                 await rk.client.edit_permissions(i, user, send_messages=True)
                 a += 1
                 await rkp.edit(
-                    f"`Memproses Global Kick Jamet Goblok! Gkicked di {a} Group Chats..`"
+                    f"`Memproses Global Kick Anak Haram...! Gkicked di {a} Group Chats..`"
                 )
 
             except BaseException:
