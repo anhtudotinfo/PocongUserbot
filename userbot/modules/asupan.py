@@ -1,83 +1,178 @@
-# 🍀 © @tofik_dn
-# ⚠️ Do not remove credits
+# reupdate by : ramadhani892
+# Thanks For @tofik_dn & @mrismanaziz
 
-import requests
 import random
-from userbot import CMD_HANDLER as cmd
-from userbot import CMD_HELP, owner
-from userbot.utils import edit_or_reply, poci_cmd
+
+from userbot import CMD_HELP, BLACKLIST_CHAT, CMD_HANDLER as cmd
+from userbot.utils import poci_cmd, edit_or_reply, edit_delete
+from userbot import owner
+from telethon.tl.types import InputMessagesFilterVoice
+from telethon.tl.types import InputMessagesFilterPhotos
 from telethon.tl.types import InputMessagesFilterVideo
+from telethon.tl.types import InputMessagesFilterMusic
 
-
-@poci_cmd(pattern="asupan$")
+@poci_cmd(pattern=r"vbkp$")
 async def _(event):
-    xx = await edit_or_reply(event, "**Bentar.... cari video asupannya dlu**")
+    if event.chat_id in BLACKLIST_CHAT:
+        return await edit_delete(
+            event, "**NYARI BOKEP JANGAN DISINI ANJING LU NGENTOD!!!!!**", 5
+        )
+    ram = await edit_or_reply(event, "`Bentar Monyed Lagi Gua Ambilin...`")
+    try:
+        videonya = [
+            asupan
+            async for asupan in event.client.iter_messages(
+                "@AsupanAku", filter=InputMessagesFilterVideo
+            )
+        ]
+        await event.client.get_me()
+        await event.client.send_file(
+            event.chat_id,
+            file=random.choice(videonya),
+            caption=f"Silahkan menikmati.",
+            reply_to=event.reply_to_msg_id)
+        await ram.delete()
+    except Exception:
+        await ram.edit("Kalo Gak bisa Gausah Nangis Tod")
+
+
+
+@poci_cmd(pattern=r"vtik$")
+async def _(event):
+    ram = await edit_or_reply(event, "`Bentar Gua cariin....`")
+    try:
+        videonya = [
+            asupan
+            async for asupan in event.client.iter_messages(
+                "@tiktody", filter=InputMessagesFilterVideo
+            )
+        ]
+        aing = await event.client.get_me()
+        await event.client.send_file(
+            event.chat_id,
+            file=random.choice(videonya),
+            caption=f"Silahkan menikmati [{owner}](tg://user?id={aing.id})",
+            reply_to=event.reply_to_msg_id)
+        await ram.delete()
+    except Exception:
+        await ram.edit("Kalo Gak bisa, Ya jangan nangis tod")
+
+
+@poci_cmd(pattern=r"ayg$")
+async def _(event):
+    syg = await edit_or_reply(event, "Sabar Gua Cariin Ayang yg cocok sama lu....")
     try:
         asupannya = [
             asupan
             async for asupan in event.client.iter_messages(
-                "@Asupan_Pocong", filter=InputMessagesFilterVideo
+                "@tiktody", filter=InputMessagesFilterPhotos
             )
         ]
-        sy = await event.client.get_me()
+        aing = await event.client.get_me()
         await event.client.send_file(
             event.chat_id,
             file=random.choice(asupannya),
-            caption=f"nih asupan buat  [{owner}](tg://user?id={sy.id}) biar ga lemess 🥵",
-        )
-        await xx.delete()
+            caption=f"Ini Ayang Lu [{owner}](tg://user?id={aing.id})",
+            reply_to=event.reply_to_msg_id)
+        await syg.delete()
     except Exception:
-        await xx.edit("**Tidak bisa menemukan video asupan tiktok.**")
+        await syg.edit("Kalo Gak bisa, Ya jangan nangis tod")
 
-
-@poci_cmd(pattern="wibu$")
+@ram_cmd(pattern=r"dcewe$")
 async def _(event):
-    xx = await edit_or_reply(event, "`Prosses.... ya wibuu`")
+    dsh = await edit_or_reply(event, "**Sebentar ya cok....**")
     try:
-        wibukntl = [
-            wibu
-            async for wibu in event.client.iter_messages(
-                "@pocongwibu", filter=InputMessagesFilterVideo
+        desahnya = [
+            desah
+            async for desah in event.client.iter_messages(
+                "@desahancewesangesange", filter=InputMessagesFilterVoice
             )
         ]
-        mmq = await event.client.get_me()
+        aing = await event.client.get_me()
         await event.client.send_file(
             event.chat_id,
-            file=random.choice(wibukntl),
-            caption=f"nih buat lo [{owner}](tg://user?id={mmq.id}) vvibu bau bawang",
-        )
-        await xx.delete()
+            file=random.choice(desahnya),
+            caption=f"Silahkan menikmati tot! [{owner}](tg://user?id={aing.id})",
+            reply_to=event.reply_to_msg_id)
+        await dsh.delete()
     except Exception:
-        await xx.edit("**Tidak bisa menemukan video anime.**")
+        await dsh.edit("`Yah Kurang beruntung lu cok...`")
 
 
-@poci_cmd(pattern="chika$")
+@poci_cmd(pattern=r"dcowo$")
 async def _(event):
-    xx = await edit_or_reply(event, "**Prosess....**")
+    dsh = await edit_or_reply(event, "`Bentar cok...`")
     try:
-        response = requests.get("https://api-alphabot.herokuapp.com/api/asupan/chika?apikey=Alphabot").json()
-        await event.client.send_file(event.chat_id, response["url"])
-        await xx.delete()
+        desahnya = [
+            desah
+            async for desah in event.client.iter_messages(
+                "@desahancowo", filter=InputMessagesFilterVoice
+            )
+        ]
+        aing = await event.client.get_me()
+        await event.client.send_file(
+            event.chat_id,
+            file=random.choice(desahnya),
+            caption=f"Silahkan Menikmati [{owner}](tg://user?id={aing.id})",
+            reply_to=event.reply_to_msg_id)
+        await dsh.delete()
     except Exception:
-        await xx.edit("**Maaf 🥺 , untuk cmd ini belum dapat digunakan untuk saat ini.**")
+        await dsh.edit("`Yah Kurang Beruntung lu cok...`")
+# =================≠================================================================================================================================
+
+@poci_cmd(pattern=r"alq$")
+async def _(event):
+    ram = await edit_or_reply(event, "`Masya Allah, tobat.....`")
+    try:
+        qurannya = [
+            quran
+            async for quran in event.client.iter_messages(
+                "@kureenkeryam", filter=InputMessagesFilterMusic
+            )
+        ]
+        aing = await event.client.get_me()
+        await event.client.send_file(
+            event.chat_id,
+            file=random.choice(qurannya),
+            caption=f"Dengarkan Dengan Khusyu [{owner}](tg://user?id={aing.id})",
+           reply_to=event.reply_to_msg_id)
+        await ram.delete()
+    except Exception:
+        await ram.edit(f"`Kalo Ga bisa, Jangan nangis ya {owner}`")
+
+
+@poci_cmd(pattern=r"sholawat$")
+async def _(event):
+    ram = await edit_or_reply(event, "**Sedang mencari sholawat....**")
+    try:
+        sholawatnya = [
+            quran
+            async for quran in event.client.iter_messages(
+                "@pengagum_sholawat", filter=InputMessagesFilterMusic
+            )
+        ]
+        aing = await event.client.get_me()
+        await event.client.send_file(
+            event.chat_id,
+            file=random.choice(sholawatnya),
+            caption=f"Dengerin tuh Sholawat Biar adem [{owner}](tg://user?id={aing.id})",
+           reply_to=event.reply_to_msg_id)
+        await ram.delete()
+    except Exception:
+        await ram.edit(f"`Kalo Gabisa Ya jangan nangis lah {owner}.`")
 
 
 CMD_HELP.update(
     {
         "asupan": f"**Plugin : **`asupan`\
-        \n\n  •  **Syntax :** `{cmd}asupan`\
-        \n  •  **Function : **Mengirim video asupan tiktok secara random.\
-        \n\n  •  **Syntax :** `{cmd}chika`\
-        \n  •  **Function : **Mengirim video chika secara random.\
-    "
-    }
-)
-
-CMD_HELP.update(
-    {
-        "wibu": f"**Plugin : **`Wibu`\
-        \n\n  •  **Syntax :** `{cmd}wibu`\
-        \n  •  **Function : **Mengirim secara random video anime\
+        \n\n  •  **Syntax :** `{cmd}vtik`\
+        \n  •  **Function : **Untuk mengirim Video Asupan Dari Tiktok Secara Random.\
+        \n\n  • **Syntax  :** `{cmd}vbkp`\
+        \n  •  **Function : **Untuk Mengirim Video Asupan Biologi Dari Sesuatu Secara Random.\
+        \n\n  •  **Syntax :** `{cmd}ayg`\
+        \n  •  **Function : **Untuk Mengirim Foto cewe cantik secara random.\
+        \n\n  •  **Syntax :** `{cmd}dcowo` or  `{cmd}dcewe`\
+        \n  •  **Function : **Untuk Mengirim suara desah buat lu yang sange.\
     "
     }
 )
