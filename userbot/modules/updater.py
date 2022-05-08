@@ -91,7 +91,7 @@ async def deploy(xx, repo, ups_rem, ac_br, txt):
                 xx, "**Build Gagal!** Dibatalkan karena ada beberapa error.`"
             )
         await edit_or_reply(
-            xx, "`PocongUserbot Berhasil Di Deploy! Userbot bisa di gunakan kembali.`"
+            xx, "`U-Bot Berhasil Di Deploy! Userbot bisa di gunakan kembali.`"
         )
 
     else:
@@ -106,7 +106,7 @@ async def update(xx, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await edit_or_reply(
-       xx, "`PocongUserbot Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`"
+       xx, "`U-Bot Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`"
     )
 
     try:
@@ -171,7 +171,7 @@ async def upstream(event):
         return
 
     if changelog == "" and not force_update:
-        await edit_delete(xx, "**⚡ PocongUserbot Sudah Versi Terbaru**")
+        await edit_delete(xx, "**🤖  U-Bot Sudah Versi Terbaru Ya Kak**")
         return repo.__del__()
 
     if conf == "" and not force_update:
@@ -205,9 +205,9 @@ CMD_HELP.update(
     {
         "update": f"**Plugin : **`update`\
         \n\n  •  **Syntax :** `{cmd}update`\
-        \n  •  **Function : **Untuk Melihat Pembaruan Terbaru PocongUserbot.\
+        \n  •  **Function : **Untuk Melihat Pembaruan Terbaru Userbot.\
         \n\n  •  **Syntax :** `{cmd}update deploy`\
-        \n  •  **Function : **Untuk MengUpdate Fitur Terbaru Dari PocongUserbot.\
+        \n  •  **Function : **Untuk MengUpdate Fitur Terbaru Dari Userbot.\
     "
     }
 )
